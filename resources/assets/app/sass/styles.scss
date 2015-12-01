@@ -1,0 +1,47 @@
+// Laravel welcome
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: table;
+  font-weight: 100;
+  font-family: 'Lato';
+
+  // Door de ~ wordt gekeken in de dir's die bij
+  // modulesDirectories in webpack.config.json staan
+  // Afbeeldingen <= 10k worden inline gebracht
+  background: url(~img/layout/pattern.png);
+}
+
+.container {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.content {
+  padding: 30px;
+  text-align: center;
+  display: inline-block;
+
+  // Deze afbeelding zal niet inline worden gebracht,
+  // maar wordt in build/img/ komen, met een hash
+  // in de bestandsnaam (cachebusting!)
+  background: url(~img/layout/background.jpg) 50% 50% / contain no-repeat;
+}
+
+.title {
+  font-size: 96px;
+  font-weight: 600;
+}
+
+strong {
+  font-weight: 600;
+}
+
+// Animate css (import vanuit node_modules)
+@import '~animate.css/animate.min.css';
