@@ -1,3 +1,4 @@
+- php vendor/bin/homestead make
 - vagrant up (`192.168.10.10 homestead.app` toevoegen aan je hosts file)
 - npm install
 
